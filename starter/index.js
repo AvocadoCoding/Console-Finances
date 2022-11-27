@@ -89,7 +89,6 @@ var finances = [
 
 // Total number of months in data set
 var TotalMonths= (finances.length);
-console.log(TotalMonths);
 
 
 // Sum of Profit/ Losses over period
@@ -103,9 +102,8 @@ for (var i=0; i < finances.length; i++){
     NetTotalProfitLoss = NetTotalProfitLoss + MonthProfitLoss;
 }
 
-console.log(NetTotalProfitLoss);
 
-// 85 element loop to calucalte month prfi/loss changes and greatest and least values
+// 85 element loop to calucalte month profit/loss changes and greatest and least values
 
 var SumProfitLossChange= 0
 var GreatestIncreaseProfits = 0
@@ -139,13 +137,17 @@ for (var i=1; i < finances.length; i++){
  
 }
 
-var AverageMonthlyChange=  SumProfitLossChange / (finances.length - 1)
-console.log(AverageMonthlyChange);
+var AverageMonthlyChange = SumProfitLossChange / (finances.length - 1);
+var AverageMonthlyChangeRounded = AverageMonthlyChange.toFixed(2);
 
-console.log(GreatestIncreaseProfits)
 
-console.log(GreatestIncreaseMonth)
 
-console.log(GreatestDecreaseProfits)
+// Console output
 
-console.log(GreatestDecreaseMonth)
+console.log("Financial Analysis");
+console.log("--------------------------");
+console.log("Total Months: " + TotalMonths)
+console.log("Total: $" + NetTotalProfitLoss)
+console.log("Average Change: $" + AverageMonthlyChangeRounded)
+console.log("Greatest Increase in Profits: " + GreatestIncreaseMonth + " ($" + GreatestIncreaseProfits + ")")
+console.log("Greatest Decrease in Profits: " + GreatestDecreaseMonth + " ($" + GreatestDecreaseProfits + ")")
