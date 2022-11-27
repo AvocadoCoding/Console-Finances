@@ -87,19 +87,37 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+// Total number of months in data set
+var TotalMonths= (finances.length);
+console.log(TotalMonths);
+
+
+// Sum of Profit/ Losses over period
+
 var NetTotalProfitLoss = 0
 
 for (var i=0; i < finances.length; i++){
     var currentMonth = finances[i];
-    var Month= currentMonth[1];
+    var Month= currentMonth[0];
     var MonthProfitLoss = currentMonth[1];
     console.log(currentMonth);
     console.log(currentMonth[0]);
     console.log(currentMonth[1]);
 
-    var TotalMonths= (finances.length);
-    console.log(TotalMonths);
-
     NetTotalProfitLoss = NetTotalProfitLoss + MonthProfitLoss;
     console.log(NetTotalProfitLoss);
 }
+
+
+// Average of changes over period
+
+for (var i=1; i < finances.length; i++){
+    var currentMonth = finances[i];
+    var Month= currentMonth[0];
+    var MonthProfitLoss = currentMonth[1];
+
+    var MonthlyProfitLossChange= 
+}
+
+// var AverageMonthlyProfitLossChange = NetTotalProfitLoss / TotalMonths;
+// console.log(AverageMonthlyProfitLossChange);
