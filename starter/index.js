@@ -151,11 +151,3 @@ console.log("Total: $" + NetTotalProfitLoss)
 console.log("Average Change: $" + AverageMonthlyChangeRounded)
 console.log("Greatest Increase in Profits: " + GreatestIncreaseMonth + " ($" + GreatestIncreaseProfits + ")")
 console.log("Greatest Decrease in Profits: " + GreatestDecreaseMonth + " ($" + GreatestDecreaseProfits + ")")
-
-// Added this code to try to address error emssage on deployed web page of 'Error with permissions-policy 
-// header: Origin trial controlled feature not enabled: 'interest cohort'
-module.exports = {
-    kit: {
-      floc: true
-    }
-  };
