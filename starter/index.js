@@ -87,14 +87,19 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+var NetTotalProfitLoss = 0
+
 for (var i=0; i < finances.length; i++){
     var currentMonth = finances[i];
     var Month= currentMonth[1];
-    var MonthProfitLoss = currentMonth[2];
+    var MonthProfitLoss = currentMonth[1];
     console.log(currentMonth);
     console.log(currentMonth[0]);
     console.log(currentMonth[1]);
 
-    var TotalMonths= (finances.length)
+    var TotalMonths= (finances.length);
     console.log(TotalMonths);
+
+    NetTotalProfitLoss = NetTotalProfitLoss + MonthProfitLoss;
+    console.log(NetTotalProfitLoss);
 }
