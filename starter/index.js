@@ -111,13 +111,18 @@ for (var i=0; i < finances.length; i++){
 
 // Average of changes over period
 
+var SumProfitLossChange= 0
+
 for (var i=1; i < finances.length; i++){
     var currentMonth = finances[i];
     var Month= currentMonth[0];
     var MonthProfitLoss = currentMonth[1];
 
-    var MonthlyProfitLossChange= 
+    var MonthlyProfitLossChange= finances[i][1] - finances[i-1][1];
+
+    SumProfitLossChange= SumProfitLossChange + MonthlyProfitLossChange;
 }
 
-// var AverageMonthlyProfitLossChange = NetTotalProfitLoss / TotalMonths;
-// console.log(AverageMonthlyProfitLossChange);
+var AverageMonthlyChange=  SumProfitLossChange / (finances.length - 1)
+console.log(AverageMonthlyChange);
+
