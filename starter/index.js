@@ -94,4 +94,7 @@ for (var i=0; i < finances.length; i++){
     console.log(currentMonth);
     console.log(currentMonth[0]);
     console.log(currentMonth[1]);
+
+    var TotalMonths= (finances.length)
+    console.log(TotalMonths);
 }
