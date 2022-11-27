@@ -98,31 +98,54 @@ var NetTotalProfitLoss = 0
 
 for (var i=0; i < finances.length; i++){
     var currentMonth = finances[i];
-    var Month= currentMonth[0];
     var MonthProfitLoss = currentMonth[1];
-    console.log(currentMonth);
-    console.log(currentMonth[0]);
-    console.log(currentMonth[1]);
 
     NetTotalProfitLoss = NetTotalProfitLoss + MonthProfitLoss;
-    console.log(NetTotalProfitLoss);
 }
 
+console.log(NetTotalProfitLoss);
 
-// Average of changes over period
+// 85 element loop to calucalte month prfi/loss changes and greatest and least values
 
 var SumProfitLossChange= 0
+var GreatestIncreaseProfits = 0
+var GreatestDecreaseProfits = 0
 
 for (var i=1; i < finances.length; i++){
     var currentMonth = finances[i];
     var Month= currentMonth[0];
-    var MonthProfitLoss = currentMonth[1];
 
     var MonthlyProfitLossChange= finances[i][1] - finances[i-1][1];
 
+    // Average of profit/ loss changes over period
+
     SumProfitLossChange= SumProfitLossChange + MonthlyProfitLossChange;
+
+
+    // Greatest Increase in profits
+
+    if (MonthlyProfitLossChange > GreatestIncreaseProfits){
+        GreatestIncreaseProfits = MonthlyProfitLossChange;
+        var GreatestIncreaseMonth = Month;
+    }
+
+
+  // Greatest Increase in profits
+
+  if (MonthlyProfitLossChange < GreatestDecreaseProfits){
+      GreatestDecreaseProfits = MonthlyProfitLossChange;
+      var GreatestDecreaseMonth = Month;
+  }
+ 
 }
 
 var AverageMonthlyChange=  SumProfitLossChange / (finances.length - 1)
 console.log(AverageMonthlyChange);
 
+console.log(GreatestIncreaseProfits)
+
+console.log(GreatestIncreaseMonth)
+
+console.log(GreatestDecreaseProfits)
+
+console.log(GreatestDecreaseMonth)
