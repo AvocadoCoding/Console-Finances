@@ -86,3 +86,12 @@ var finances = [
 ['Jan-2017', 138230],
 ['Feb-2017', 671099]
 ];
+
+for (var i=0; i < finances.length; i++){
+    var currentMonth = finances[i];
+    var Month= currentMonth[1];
+    var MonthProfitLoss = currentMonth[2];
+    console.log(currentMonth);
+    console.log(currentMonth[0]);
+    console.log(currentMonth[1]);
+}
