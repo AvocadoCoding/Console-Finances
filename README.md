@@ -9,7 +9,8 @@ dataset. The code finds the requested information much more quickly than trying 
 manaully, and could easily be adapted to other similar datasets.
 
 ## Screenshot of console output
-ScreenshotOfApplication.PNG
+![image](https://user-images.githubusercontent.com/116954089/204151063-9b3cf4b3-6181-4656-97a5-df81611e2934.png)
+
 
 ## Deployed webpage location
 https://avocadocoding.github.io/Console-Finances/
